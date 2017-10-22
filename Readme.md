@@ -7,6 +7,7 @@
 ## Components
 
 * Server - app.js
+
 	~ Request module used to get the data from the remote url
 	~ Regular expression used to match all words including ' and -
 	~ Compare the words in sequence from the array of the words
