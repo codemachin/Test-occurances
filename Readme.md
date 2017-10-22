@@ -2,7 +2,11 @@
 
 ## Domain pointed to cloud server using route 53
 
-[theinvigilator.ga](http://theinvigilator.ga "live test taking system")
+[wordoccur.tk](http://wordoccur.tk/ "live test taking system")
+
+## Note
+
+Kept it as simple as i could. Didnot break into mvc format because the code is just a few lines.
 
 ## Components
 
