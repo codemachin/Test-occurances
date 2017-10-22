@@ -14,7 +14,7 @@ myApp.controller('homeController',['$http',function($http) {
    
       $http({
         method: 'GET',
-        url: 'http://localhost:3000/occur/'+main.n
+        url: './occur/'+main.n
       }).then(function successCallback(response) {
           
           main.words = response.data;
