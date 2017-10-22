@@ -8,12 +8,13 @@
 
 * Server - app.js
 
-	~ Request module used to get the data from the remote url
-	~ Regular expression used to match all words including ' and -
-	~ Compare the words in sequence from the array of the words
+```	1) Request module used to get the data from the remote url
+	2) Regular expression used to match all words including ' and -
+	3) Compare the words in sequence from the array of the words
 	  and check how may times they occur in the whole array.
-	~ Donot compare if word has already been compared before.
-	~ Sort the array and slice by the value of N.
+	4) Donot compare if word has already been compared before.
+	5) Sort the array and slice by the value of N.
+```
 
 ## ScreenShots
 
