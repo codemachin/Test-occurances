@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/png" href="img/file.png"/>
+    <title>The Invigilator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+  </head>
+<body class="bgCustom" ng-controller="homeController as home">
+  
+    
+<div class="cover">
+  <div class="container text-center">
+
+    <div ng-show="home.requested == 'false'" class="card card-login mx-auto">
+    <div class="card-header">
+      Enter N
+    </div>
+    <div class="card-body">
+      <form ng-submit="home.find()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter N where N is the top n occurances</label>
+          <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="home.n" placeholder="Enter n occurances" required="">
+        </div>
+       
+        
+        <button class="btn btn-primary btn-block" type="submit">Find occurance</button>
+      </form>
+      
+    </div>
+  </div>
+
+  
+   <div ng-if="home.requested == 'loading'" class="loader">Loading...</div>
+   
+
+  
+
+  <div ng-show="home.requested=='true'">
+    <div class="card card-login mx-auto" style="margin : 30px 0;">
+    <div class="card-header">
+      Occurance table
+      <span style="float: right">
+        <button class="btn btn-danger btn-block" ng-click="home.back();" style="height: 30px;font-size: 11px">back</button>
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+                      <table class="table table-bordered table-striped table-hover table-condensed ">
+                        <tbody>
+                          <tr>
+                            <th>
+                              Index
+                            </th>
+                            <th>
+                              Word
+                            </th>
+                            <th>
+                              Occurance
+                            </th>
+                          </tr>
+                          <tr ng-repeat="word in home.words">
+                            <td>
+                              {{$index+1}}
+                            </td>
+                            <td>
+                              {{word.word}}
+                            </td>
+                            <td>
+                              {{word.count}}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+      
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+</body>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<script src="vendor/popper/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script type="text/javascript" src="angular/app.js"></script>
+
+
+
+</html>
