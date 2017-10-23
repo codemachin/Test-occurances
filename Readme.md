@@ -2,7 +2,7 @@
 
 ## Domain pointed to cloud server using route 53
 
-[wordoccur.tk](http://wordoccur.tk/ "live test taking system")
+[wordoccur.tk](http://wordoccur.tk/ "Finding the number of occurances from a text link")
 
 ## Note
 
